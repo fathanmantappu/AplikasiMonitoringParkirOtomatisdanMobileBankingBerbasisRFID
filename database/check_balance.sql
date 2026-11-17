@@ -1,0 +1,1 @@
+-- query pemeriksa konsistensi saldo
