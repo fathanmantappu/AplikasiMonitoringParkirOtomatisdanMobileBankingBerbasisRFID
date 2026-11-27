@@ -1,3 +1,43 @@
-<!-- Registrasi dan daftar kartu -->
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><title>frontend/cards.html</title></head><body></body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kartu | e-Money Gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-page font-sans text-ink">
+  <div id="navbar"></div>
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-6">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-brand-dark">Kartu</h1>
+      <p class="mt-1 text-sm text-muted">Daftar kartu e-money beserta saldo dan statusnya.</p>
+    </div>
+    <div id="card-form-box" class="mb-8 rounded-2xl border border-brand-light bg-brand-mint p-5">
+      <h2 class="mb-3 text-base font-semibold text-brand-dark">Daftarkan kartu baru</h2>
+      <form id="card-form" novalidate class="grid gap-3 md:grid-cols-[1fr_1fr_auto] md:items-start">
+        <div>
+          <label for="uid" class="mb-1 block text-sm font-medium text-ink">UID kartu</label>
+          <input id="uid" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" placeholder="A1B2C3D4" autocomplete="off">
+        </div>
+        <div>
+          <label for="owner" class="mb-1 block text-sm font-medium text-ink">Nama pemilik</label>
+          <input id="owner" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" autocomplete="off">
+        </div>
+        <div class="flex flex-wrap gap-2 md:mt-6">
+          <button id="card-submit" type="submit" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 bg-brand text-ink shadow-sm hover:bg-brand-dark hover:text-white focus-visible:ring-brand/50">Daftarkan</button>
+          <button id="scan-btn" type="button" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 border border-line bg-white text-ink hover:bg-brand-mint focus-visible:ring-brand/50">Ambil UID dari reader</button>
+        </div>
+      </form>
+    </div>
+    <div id="cards-grid" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3"></div>
+    <div id="cards-pager" class="mt-6"></div>
+  </main>
+  <script type="module" src="assets/js/pages/cards.js"></script>
+</body>
+</html>

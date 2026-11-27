@@ -1,1 +1,5 @@
-/* Gaya global */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-ping, .animate-spin { animation: none; }
+  html { scroll-behavior: auto; }
+}

@@ -1,3 +1,44 @@
-<!-- Top-up -->
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><title>frontend/topup.html</title></head><body></body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top-up saldo | e-Money Gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-page font-sans text-ink">
+  <div id="navbar"></div>
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-6">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-brand-dark">Top-up saldo</h1>
+      <p class="mt-1 text-sm text-muted">Pilih kartu, tentukan nominal, lalu pilih sumber dana.</p>
+    </div>
+    <div class="grid gap-6 lg:grid-cols-2">
+      <section class="rounded-2xl border border-line bg-white p-5 shadow-sm">
+        <h2 class="mb-3 text-base font-semibold text-brand-dark">Kartu yang diisi</h2>
+        <div id="tabs" class="mb-4 inline-flex rounded-xl bg-brand-mint p-1"></div>
+        <div id="mode-panel"></div>
+        <div id="card-preview" class="mt-5"></div>
+      </section>
+      <section class="rounded-2xl border border-line bg-white p-5 shadow-sm h-fit">
+        <h2 class="mb-3 text-base font-semibold text-brand-dark">Nominal isi saldo</h2>
+        <form id="topup-form" novalidate>
+          <label for="amount" class="mb-1 block text-sm font-medium text-ink">Nominal (Rp)</label>
+          <div class="relative">
+            <span class="absolute left-3 top-2 text-sm text-muted">Rp</span>
+            <input id="amount" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 pl-9" inputmode="numeric" placeholder="20000" autocomplete="off">
+          </div>
+          <div id="quick" class="mt-3 flex flex-wrap gap-2"></div>
+          <button id="topup-btn" type="submit" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 bg-brand text-ink shadow-sm hover:bg-brand-dark hover:text-white focus-visible:ring-brand/50 mt-6 w-full">Isi saldo</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="assets/js/pages/topup.js"></script>
+</body>
+</html>

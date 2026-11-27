@@ -1,3 +1,27 @@
-<!-- Dashboard -->
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><title>frontend/dashboard.html</title></head><body></body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | e-Money Gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-page font-sans text-ink">
+  <div id="navbar"></div>
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-6">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-brand-dark">Dashboard</h1>
+      <p id="greeting" class="mt-1 text-sm text-muted"></p>
+    </div>
+    <div id="stats" class="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4"></div>
+    <h2 class="mb-3 text-base font-semibold text-brand-dark">Kendaraan yang sedang di dalam</h2>
+    <div id="open-sessions"></div>
+  </main>
+  <script type="module" src="assets/js/pages/dashboard.js"></script>
+</body>
+</html>

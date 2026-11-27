@@ -1,3 +1,26 @@
-<!-- Security logs -->
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><title>frontend/security-logs.html</title></head><body></body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security log | e-Money Gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-page font-sans text-ink">
+  <div id="navbar"></div>
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-6">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-brand-dark">Security log</h1>
+      <p class="mt-1 text-sm text-muted">Percobaan tidak sah dan kejadian mencurigakan yang tercatat sistem. Hanya untuk admin.</p>
+    </div>
+    <div id="table"></div>
+    <div id="pager" class="mt-4"></div>
+  </main>
+  <script type="module" src="assets/js/pages/security-logs.js"></script>
+</body>
+</html>

@@ -1,3 +1,41 @@
-<!-- Sesi parkir -->
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><title>frontend/sessions.html</title></head><body></body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sesi parkir | e-Money Gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-page font-sans text-ink">
+  <div id="navbar"></div>
+  <main class="mx-auto max-w-6xl px-4 pb-16 pt-6">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold text-brand-dark">Sesi parkir</h1>
+      <p class="mt-1 text-sm text-muted">Catatan satu kali masuk dan keluar tiap kartu. Diisi otomatis oleh gerbang.</p>
+    </div>
+    <form id="filter" novalidate class="mb-4 grid gap-3 rounded-2xl border border-line bg-white p-4 shadow-sm sm:grid-cols-[1fr_1fr_auto]">
+      <div>
+        <label for="f-uid" class="mb-1 block text-sm font-medium text-ink">UID kartu</label>
+        <input id="f-uid" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" placeholder="A1B2C3D4" autocomplete="off">
+      </div>
+      <div>
+        <label for="f-status" class="mb-1 block text-sm font-medium text-ink">Status</label>
+        <select id="f-status" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30">
+          <option value="">Semua status</option>
+          <option value="open">Di dalam</option>
+          <option value="closed">Sudah keluar</option>
+        </select>
+      </div>
+      <div class="flex items-end"><button type="submit" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 bg-brand text-ink shadow-sm hover:bg-brand-dark hover:text-white focus-visible:ring-brand/50 w-full sm:w-auto">Terapkan filter</button></div>
+    </form>
+    <div id="table"></div>
+    <div id="pager" class="mt-4"></div>
+  </main>
+  <script type="module" src="assets/js/pages/sessions.js"></script>
+</body>
+</html>

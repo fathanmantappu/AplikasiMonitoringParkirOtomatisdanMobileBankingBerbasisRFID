@@ -1,3 +1,44 @@
-<!-- Login -->
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><title>frontend/index.html</title></head><body></body></html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | e-Money Gate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-brand-mint via-page to-white font-sans text-ink">
+  <main class="flex min-h-screen items-center justify-center px-4 py-10">
+    <div class="w-full max-w-sm">
+      <div class="mb-6 text-center">
+        <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand text-ink shadow-md">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg>
+        </div>
+        <h1 class="text-2xl font-bold text-brand-dark">Web Admin Parkir</h1>
+        <p class="mt-1 text-sm text-muted">Masuk untuk mengelola kartu dan saldo.</p>
+      </div>
+
+      <div class="rounded-2xl border border-line bg-white p-6 shadow-lg">
+        <div id="login-error" class="mb-4 hidden rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-danger" role="alert"></div>
+        <form id="login-form" novalidate class="space-y-4">
+          <div>
+            <label for="username" class="mb-1 block text-sm font-medium text-ink">Username</label>
+            <input id="username" name="username" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" autocomplete="username" autofocus>
+          </div>
+          <div>
+            <label for="password" class="mb-1 block text-sm font-medium text-ink">Password</label>
+            <input id="password" name="password" type="password" class="w-full rounded-lg border border-line bg-white px-3 py-2 text-sm text-ink placeholder:text-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" autocomplete="current-password">
+          </div>
+          <p id="mock-hint" class="hidden rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">Mode data tiruan. Akun: admin / admin123 atau operator / operator123.</p>
+          <button id="login-btn" type="submit" class="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 disabled:cursor-not-allowed disabled:opacity-60 bg-brand text-ink shadow-sm hover:bg-brand-dark hover:text-white focus-visible:ring-brand/50 w-full">Masuk</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="assets/js/pages/login.js"></script>
+</body>
+</html>
